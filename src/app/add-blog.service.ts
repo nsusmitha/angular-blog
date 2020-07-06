@@ -1,25 +1,25 @@
-//import { Observable,of } from 'rxjs';
 import { Blog } from './blog';
 import { Injectable } from '@angular/core';
-//import { Subject }    from '../node_modules/rxjs/Subject';
+import { BehaviorSubject, Observable } from 'rxjs';
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AddBlogService {
-  blogSet : Array<Blog> = [];
-  //public postAdded_Observable = new Subject();
-addBlog(blog: Blog){
-  // const blogData= JSON.parse(JSON.stringify(blog))
-   this.blogSet.push(blog)
-   console.log(JSON.stringify(this.blogSet))
-    return this.blogSet;
-  //id: blog.id,
-  
+  private blogSet: Array<Blog> = [];
 
-}
-getBlog()
-{
-  return this.blogSet;
-}
-  constructor() { }
+  // $ = stream
+  private blogSubject = new BehaviorSubject<Blog[]>(this.blogSet);
+
+  constructor() {}
+
+  get blogs$() {
+    return this.blogSubject as Observable<Blog[]>;
+  }
+
+  addBlog(blog: Blog) {
+    this.blogSet.push(blog);
+
+    this.blogSubject.next(this.blogSet);
+  }
 }

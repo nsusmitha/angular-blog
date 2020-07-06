@@ -1,33 +1,34 @@
-
 import { Blog } from './../blog';
 import { AddBlogService } from './../add-blog.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-add-blog',
   templateUrl: './add-blog.component.html',
   styleUrls: ['./add-blog.component.css'],
-  providers: [AddBlogService]
 })
 export class AddBlogComponent implements OnInit {
-  public blog:Blog;
-  constructor(private addBlogService:AddBlogService) {
-  this.blog = new Blog();
- }
-   addblog()
-   {
-   this.addBlogService.addBlog(this.blog);
+  public blog: Blog;
+
+  blogs$: Observable<Blog[]>;
+
+  constructor(private addBlogService: AddBlogService) {
+    this.blog = new Blog();
+    this.blogs$ = addBlogService.blogs$;
   }
-  
-    //blogs=[]
- ngOnInit(){
-     this.addblog();
+
+  addblog() {
+    this.addBlogService.addBlog({ title: 'test', content: 'test' });
   }
-    //addblog(title, content){
-     //let blog={"title": title.value,"content":content.value};
-   // if(localStorage.getItem("blogs")){
+
+  ngOnInit() {
+    this.addblog();
+  }
+  //addblog(title, content){
+  //let blog={"title": title.value,"content":content.value};
+  // if(localStorage.getItem("blogs")){
   //     this.blogs=JSON.parse(localStorage.getItem("blogs"))
   //   }
   //   this.blogs.push(blog);
@@ -37,4 +38,3 @@ export class AddBlogComponent implements OnInit {
   //   alert("blog submitted")
   // }
 }
-

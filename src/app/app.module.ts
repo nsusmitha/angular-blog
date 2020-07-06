@@ -1,9 +1,8 @@
 import { AddBlogService } from './add-blog.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,16 +17,9 @@ import { CommentComponent } from './comment/comment.component';
     HomeComponent,
     AddBlogComponent,
     PagenotfoundComponent,
-    CommentComponent
+    CommentComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FormsModule
-
-  ],
-  providers: [AddBlogService],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
