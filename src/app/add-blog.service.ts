@@ -11,8 +11,6 @@ export class AddBlogService {
   // $ = stream
   private blogSubject = new BehaviorSubject<Blog[]>(this.blogSet);
 
-  constructor() {}
-
   get blogs$() {
     return this.blogSubject as Observable<Blog[]>;
   }

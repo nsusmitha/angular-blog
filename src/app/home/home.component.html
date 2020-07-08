@@ -1,11 +1,21 @@
 <p>home works!</p>
 <h2>My Blogs</h2>
-
+<br />
 <div *ngIf="blogs$ | async as blogs">
-  <p *ngFor="let blog of blogs">Test</p>
-</div>
+  <div class="card" *ngFor="let blog of blogs">
+    <div class="card-header">
+      {{ blog.title }}
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{ blog.content }}</p>
+    </div>
+  </div>
 
-<!-- <ul class="blogs">
+  <!-- <div *ngIf="blogs$ | async as blogs">
+  <p *ngFor="let blog of blogs">Test</p>
+</div> -->
+
+  <!-- <ul class="blogs">
   <li *ngFor="let blog of blogs"
   [class.selected]="blog === selectedBlog"
   (click)="onSelect(blog)" >
@@ -19,9 +29,10 @@
 <div><span>id: </span>{{selectedBlog.id}}</div>
 div><span>title: </span>{{selectedBlog.title}}</div> -->
 
-<!-- <div>
+  <!-- <div>
     <label>title:
       <input [(ngModel)]="selectedBlog.title" placeholder="name"/>
     </label>
     div><span>content: </span>{{selectedBlog.content}}</div>
   </div> -->
+</div>
