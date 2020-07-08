@@ -20,12 +20,10 @@ export class AddBlogComponent implements OnInit {
   }
 
   addblog() {
-    this.addBlogService.addBlog({ title: 'test', content: 'test' });
+    this.addBlogService.addBlog(this.blog);
   }
 
-  ngOnInit() {
-    this.addblog();
-  }
+  ngOnInit() {}
   //addblog(title, content){
   //let blog={"title": title.value,"content":content.value};
   // if(localStorage.getItem("blogs")){
