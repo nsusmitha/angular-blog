@@ -1,13 +1,16 @@
-<p>home works!</p>
-<h2>My Blogs</h2>
-<br />
-<div *ngIf="blogs$ | async as blogs">
-  <div class="card" *ngFor="let blog of blogs">
-    <div class="card-header">
-      {{ blog.title }}
-    </div>
-    <div class="card-body">
-      <p class="card-text">{{ blog.content }}</p>
+<div class="container">
+  <h2>My Blogs</h2>
+  <br />
+  <div *ngIf="blogs$ | async as blogs">
+    <div style="padding: 20px 0px;" *ngFor="let blog of blogs">
+      <div class="card">
+        <div class="card-header">
+          {{ blog.title }}
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{ blog.content }}</p>
+        </div>
+      </div>
     </div>
   </div>
 
