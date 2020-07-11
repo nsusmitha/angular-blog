@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { AddBlogComponent } from './add-blog/add-blog.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CommentComponent } from './comment/comment.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { CommentComponent } from './comment/comment.component';
     AddBlogComponent,
     PagenotfoundComponent,
     CommentComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   bootstrap: [AppComponent],
