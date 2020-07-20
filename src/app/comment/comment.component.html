@@ -1,9 +1,8 @@
-<p>comment works!</p>
+<!-- <p>comment works!</p> -->
 <div id="respond">
-
-    <h3>Leave a Comment</h3>
-  
-    <form>
+  <h3>Leave a Comment</h3>
+  <br />
+  <!-- <form>
   
       <label for="comment_author" class="required">Your name</label>
       <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
@@ -16,8 +15,61 @@
   
       
       <!--<input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" /> -->
-      <input name="submit" type="submit" value="Submit comment" />
+  <!-- <input name="submit" type="submit" value="Submit comment" />
   
-    </form>
-  
-  </div>
+    </form> -->
+
+  <form>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationServer01">First name</label>
+        <input
+          type="text"
+          class="form-control is-valid"
+          id="validationServer01"
+          value="Mark"
+          required
+        />
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationServer02">Last name</label>
+        <input
+          type="text"
+          class="form-control is-valid"
+          id="validationServer02"
+          value="Otto"
+          required
+        />
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="name@example.com"
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your email with anyone else.</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">your message</label>
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addComment()">
+      Submit Comment
+    </button>
+  </form>
+</div>

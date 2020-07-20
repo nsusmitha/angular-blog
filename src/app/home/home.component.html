@@ -1,6 +1,7 @@
 <div class="container">
   <h2>My Blogs</h2>
   <br />
+
   <div *ngIf="blogs$ | async as blogs">
     <div style="padding: 20px 0px;" *ngFor="let blog of blogs">
       <div class="card">
@@ -8,34 +9,47 @@
           {{ blog.title }}
         </div>
         <div class="card-body">
-          <p class="card-text">{{ blog.content }}</p>
+          <a routerLink="/blog-details">
+            <p class="card-text">{{ blog.content }}</p></a
+          >
+          <br />
+          <a href="#" routerLink="/comment" class="btn btn-primary"
+            >Add Comment</a
+          >
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- <div *ngIf="blogs$ | async as blogs">
+    <!-- </div> -->
+
+    <!-- <div *ngIf="blogs$ | async as blogs">
   <p *ngFor="let blog of blogs">Test</p>
 </div> -->
 
-  <!-- <ul class="blogs">
+    <!-- <ul class="blogs">
+     <li *ngIf="blogs$ | async as blogs">
   <li *ngFor="let blog of blogs"
   [class.selected]="blog === selectedBlog"
   (click)="onSelect(blog)" >
-    <span class="badge">{{blog.id}}</span> {{blog.title}}   {{blog.content}}
+    <span class="badge">{{blog.title}}</span>
   </li>
 </ul>
 
-<div *ngIf="selectedBlog">
+<app-blog-details [blog]
+="selectedBlog"></app-blog-details> -->
+
+    <!-- <div *ngIf="selectedBlog">
 
 <h2>{{selectedBlog.title | uppercase}} Details</h2>
 <div><span>id: </span>{{selectedBlog.id}}</div>
 div><span>title: </span>{{selectedBlog.title}}</div> -->
 
-  <!-- <div>
+    <!-- <div>
     <label>title:
       <input [(ngModel)]="selectedBlog.title" placeholder="name"/>
     </label>
     div><span>content: </span>{{selectedBlog.content}}</div>
   </div> -->
+    <!-- </div> -->
+  </div>
 </div>

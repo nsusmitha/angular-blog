@@ -12,6 +12,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CommentComponent } from './comment/comment.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
     CommentComponent,
     HeaderComponent,
     FooterComponent,
+    BlogDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   bootstrap: [AppComponent],

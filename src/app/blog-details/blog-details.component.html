@@ -1,0 +1,11 @@
+<p>blog-details works!</p>
+<div *ngIf="blog">
+  <h2>{{ blog.title | uppercase }} Details</h2>
+  <!-- <div><span>id: </span>{{hero.id}}</div> -->
+  <div>
+    <label
+      >content:
+      <input [(ngModel)]="blog.content" placeholder="content" />
+    </label>
+  </div>
+</div>
