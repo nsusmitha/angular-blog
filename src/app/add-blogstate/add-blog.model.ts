@@ -1,6 +1,4 @@
-
-export class Blog {
+export interface Blog {
   title: string;
   content: string;
- 
 }

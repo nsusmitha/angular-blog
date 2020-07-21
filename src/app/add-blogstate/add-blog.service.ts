@@ -1,4 +1,4 @@
-import { Blog } from './blog';
+import { Blog } from './add-blog.model';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { uuid } from 'uuidv4';
