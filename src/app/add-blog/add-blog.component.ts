@@ -1,5 +1,6 @@
-import { Blog } from './../blog';
-import { AddBlogService } from './../add-blog.service';
+import { BlogsQuery } from './../add-blogstate/add-blog.query';
+import { Blog } from './../add-blogstate/add-blog.model';
+import { AddBlogsService } from './../add-blogstate/add-blog.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -10,18 +11,19 @@ import { Observable } from 'rxjs';
   styleUrls: ['./add-blog.component.css'],
 })
 export class AddBlogComponent implements OnInit {
-  public blog: Blog;
+  // public blog: Blog;
 
   blogs$: Observable<Blog[]>;
 
-  constructor(private addBlogService: AddBlogService) {
-    this.blog = new Blog();
-    this.blogs$ = addBlogService.blogs$;
-  }
+  constructor(
+    private addBlogsService: AddBlogsService,
+    private Query: BlogsQuery
+  ) {}
 
+  ngOnInit() {
+    this.blogs$ = this.BlogsQuery.selectAll() as Observable<Blog[]>;
+  }
   addblog() {
-    this.addBlogService.addBlog(this.blog);
+    this.addBlogsService.addBlog(this.blog);
   }
-
-  ngOnInit() {}
 }

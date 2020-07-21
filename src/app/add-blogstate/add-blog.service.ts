@@ -1,19 +1,19 @@
 import { Blog } from './add-blog.model';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { uuid } from 'uuidv4';
+// import { uuid } from 'uuidv4';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AddBlogService {
+export class AddBlogsService {
   private blogSet: Array<Blog> = [];
 
   // $ = stream
   private blogSubject = new BehaviorSubject<Blog[]>(this.blogSet);
 
   get blogs$() {
-    console.log(uuid());
+    // console.log(uuid());
 
     return this.blogSubject as Observable<Blog[]>;
   }
