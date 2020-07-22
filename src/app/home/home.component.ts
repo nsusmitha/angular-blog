@@ -1,6 +1,8 @@
-import { AddBlogService } from './../add-blog.service';
+import { Blog } from './../add-blogstate/add-blog.model';
+import { AddBlogsService } from './../add-blogstate/add-blog.service';
+// import { AddBlogService } from './../add-blog.service';
 import { Component, OnInit } from '@angular/core';
-import { Blog } from '../blog';
+// import { Blog } from '../blog';
 import { Observable } from 'rxjs';
 
 @Component({

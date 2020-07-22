@@ -1,4 +1,5 @@
-import { AddBlogService } from './add-blog.service';
+import { AddBlogsService } from './add-blogstate/add-blog.service';
+// import { AddBlogService } from './add-blog.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
