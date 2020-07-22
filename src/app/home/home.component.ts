@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
   blogs$: Observable<Blog[]>;
 
-  constructor(private addBlogService: AddBlogService) {}
+  constructor(private addBlogService: AddBlogsService) {}
 
   ngOnInit() {
     this.blogs$ = this.addBlogService.blogs$;
