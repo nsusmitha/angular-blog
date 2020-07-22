@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class BlogsQuery extends QueryEntity<BlogsState> {
-  constructor(protected store: BlogsStore) {
-    super(store);
+  constructor(protected blogsStore: BlogsStore) {
+    super(blogsStore);
   }
 }
