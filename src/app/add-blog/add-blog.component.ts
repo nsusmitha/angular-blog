@@ -11,7 +11,10 @@ import { Observable } from 'rxjs';
   styleUrls: ['./add-blog.component.css'],
 })
 export class AddBlogComponent implements OnInit {
-  // public blog: Blog;
+  public blog: Blog = {
+    title: '',
+    content: '',
+  };
 
   blogs$: Observable<Blog[]>;
 
@@ -21,7 +24,7 @@ export class AddBlogComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.blogs$ = this.BlogsQuery.selectAll() as Observable<Blog[]>;
+    this.blogs$ = this.Query.selectAll() as Observable<Blog[]>;
   }
   addblog() {
     this.addBlogsService.addBlog(this.blog);
