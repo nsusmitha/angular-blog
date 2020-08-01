@@ -1,5 +1,5 @@
 import { QueryEntity } from '@datorama/akita';
-import { BlogsState, BlogsStore } from './add-blog.store';
+import { BlogsState, BlogsStore } from './blog.store';
 import { Injectable } from '@angular/core';
 
 @Injectable({

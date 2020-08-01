@@ -1,6 +1,6 @@
-import { BlogsQuery } from './../add-blogstate/add-blog.query';
-import { Blog } from './../add-blogstate/add-blog.model';
-import { AddBlogsService } from './../add-blogstate/add-blog.service';
+import { BlogsQuery } from '../blogstate/blog.query';
+import { Blog } from './../blogstate/blog.model';
+import { AddBlogsService } from './../blogstate/blog.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';

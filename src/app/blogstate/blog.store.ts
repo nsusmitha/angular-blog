@@ -1,4 +1,4 @@
-import { Blog } from './add-blog.model';
+import { Blog } from './blog.model';
 import { EntityState, EntityStore, StoreConfig } from '@datorama/akita';
 import { Injectable } from '@angular/core';
 
