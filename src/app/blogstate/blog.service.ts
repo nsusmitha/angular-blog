@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class AddBlogsService {
+export class AddBlogService {
   private blogSet: Array<Blog> = [];
 
   // $ = stream

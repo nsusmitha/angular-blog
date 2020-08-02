@@ -1,4 +1,4 @@
-import { Blog } from './../add-blogstate/add-blog.model';
+import { Blog } from './../blogstate/blog.model';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

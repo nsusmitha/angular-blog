@@ -1,4 +1,4 @@
-import { Comment } from './../comment.model';
+import { Comment } from './../comment state/comment.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

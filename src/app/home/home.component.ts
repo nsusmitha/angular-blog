@@ -1,5 +1,5 @@
-import { Blog } from './../add-blogstate/add-blog.model';
-import { AddBlogsService } from './../add-blogstate/add-blog.service';
+import { Blog } from './../blogstate/blog.model';
+import { AddBlogService } from './../blogstate/blog.service';
 // import { AddBlogService } from './../add-blog.service';
 import { Component, OnInit } from '@angular/core';
 // import { Blog } from '../blog';
@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
   blogs$: Observable<Blog[]>;
 
-  constructor(private addBlogService: AddBlogsService) {}
+  constructor(private addBlogService: AddBlogService) {}
 
   ngOnInit() {
     this.blogs$ = this.addBlogService.blogs$;
