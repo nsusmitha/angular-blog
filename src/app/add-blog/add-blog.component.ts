@@ -20,14 +20,15 @@ export class AddBlogComponent implements OnInit {
   blogs$: Observable<Blog[]>;
 
   constructor(
-    private addBlogService: AddBlogService,
-    private Query: BlogsQuery
+    private blogService: AddBlogService,
+    private blogsQuery: BlogsQuery
   ) {}
 
   ngOnInit() {
-    this.blogs$ = this.Query.selectAll() as Observable<Blog[]>;
+    //this.blogs$ = this.blogsQuery.selectAll() as Observable<Blog[]>;
+    this.blogs$ = this.blogsQuery.selectAll();
   }
   addblog() {
-    this.addBlogService.addBlog(this.blog);
+    this.blogService.addBlog(this.blog);
   }
 }
