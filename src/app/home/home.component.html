@@ -6,17 +6,18 @@
     <div style="padding: 20px 0px;" *ngFor="let blog of blogs$ | async">
       <div class="card">
         <div class="card-header">
-          {{ blog.title }}
+          <a [routerLink]="getLink(blog)">
+            {{ blog.title }}
+          </a>
         </div>
         <div class="card-body">
-          <a routerLink="/blog-details">
-            <p class="card-text">{{ blog.content }}</p>
-          </a>
+          <!-- <a routerLink="/blog-details"> -->
+          <p class="card-text">{{ blog.content }}</p>
 
           <br />
-          <a href="#" routerLink="/comment" class="btn btn-primary"
+          <!-- <a href="#" routerLink="/comment" class="btn btn-primary"
             >Add Comment</a
-          >
+          > -->
         </div>
       </div>
     </div>

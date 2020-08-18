@@ -1,11 +1,23 @@
-<p>blog-details works!</p>
-<div *ngIf="blog">
-  <h2>{{ blog.title | uppercase }} Details</h2>
-  <!-- <div><span>id: </span>{{hero.id}}</div> -->
-  <div>
-    <label
-      >content:
-      <input [(ngModel)]="blog.content" placeholder="content" />
-    </label>
+<!-- <div *ngIf="blog$| async as blog " *ngFor="let blog of blogs | async"> -->
+<div style="padding: 20px 0px;" *ngIf="blog$ | async as blog">
+  <div class="card">
+    <div class="card-header">
+      <h3>{{ blog.title | uppercase }} Details</h3>
+    </div>
+
+    <!-- <h2>{{ blog.title | uppercase }} Details</h2> -->
+    <!-- <div><span>id: </span>{{hero.id}}</div> -->
+    <div class="card-body">
+      <!-- <label
+      >content: -->
+      <br />
+      <p class="card-text">
+        <input [(ngModel)]="blog.content" placeholder="content" />
+      </p>
+      <!-- </label> -->
+
+      <br />
+      <a href="#" routerLink="/comment" class="btn btn-primary">Add Comment</a>
+    </div>
   </div>
 </div>

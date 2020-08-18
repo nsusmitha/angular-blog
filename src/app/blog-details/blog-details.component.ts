@@ -3,6 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { BlogsQuery } from '../blogstate/blog.query';
 import { AddBlogService } from './../blogstate/blog.service';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
@@ -23,7 +24,10 @@ export class BlogDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
-    //this.blog$ =this.blogsQuery.select(this.id);
+    console.log('this.id: ', this.id);
+    this.blog$ = this.blogsQuery
+      .selectEntity(this.id)
+      .pipe(tap((value) => console.log('retrieved blog: ', value)));
   }
   assignBlog(blogID: string) {
     this.globalBlogID = blogID;

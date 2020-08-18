@@ -2,7 +2,7 @@ import { Blog } from './blog.model';
 import { EntityState, EntityStore, StoreConfig } from '@datorama/akita';
 import { Injectable } from '@angular/core';
 
-export interface BlogsState extends EntityState<Blog, number> {}
+export interface BlogsState extends EntityState<Blog, string> {}
 
 @StoreConfig({ name: 'blogs' })
 @Injectable({

@@ -25,4 +25,8 @@ export class HomeComponent implements OnInit {
     this.blogsQuery.selectAll().subscribe((blog) => console.log(blog));
     this.blogs$ = this.blogsQuery.selectAll();
   }
+
+  getLink(blog: Blog): string {
+    return `/blog-details/${blog.id}`;
+  }
 }
