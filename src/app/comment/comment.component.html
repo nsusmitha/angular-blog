@@ -1,5 +1,6 @@
 <!-- <p>comment works!</p> -->
-<div id="respond">
+<!-- <div id="respond"> -->
+<div class="container my-container">
   <h3>Leave a Comment</h3>
   <br />
   <!-- <form>
@@ -20,9 +21,9 @@
     </form> -->
 
   <form>
-    <div class="form-row">
+    <!-- <div class="form-row">
       <div class="col-md-6 mb-3">
-        <label for="validationServer01">First name</label>
+        <label for="validationServer01">Name</label>
         <input
           type="text"
           class="form-control is-valid"
@@ -66,6 +67,24 @@
         class="form-control"
         id="exampleFormControlTextarea1"
         rows="3"
+      ></textarea>
+    </div> -->
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        name="title"
+        [(ngModel)]="comment.name"
+        class="form-control"
+        placeholder="Add name"
+      />
+
+      <label for="message" class="required">Message</label>
+      <textarea
+        name="message"
+        [(ngModel)]="comment.message"
+        class="form-control"
+        placeholder="Add comment"
       ></textarea>
     </div>
     <button type="submit" class="btn btn-primary" (click)="addComment()">

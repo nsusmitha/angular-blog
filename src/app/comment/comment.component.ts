@@ -1,5 +1,8 @@
-import { Comment } from './../comment state/comment.model';
-import { Component, OnInit } from '@angular/core';
+import { Comment } from './../commentstate/comment.model';
+import { Component, OnInit, Input } from '@angular/core';
+import { CommentsQuery } from '../commentstate/comment.query';
+import { CommentsService } from './../commentstate/comment.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-comment',
@@ -7,7 +10,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comment.component.css'],
 })
 export class CommentComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private commentsService: CommentsService,
+    private commentsQuery: CommentsQuery
+  ) {}
 
   ngOnInit(): void {}
 
