@@ -4,34 +4,32 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { v4 as uuid } from 'uuid';
 interface AddComment {
-  title: string;
-  content: string;
+  name: string;
+  message: string;
 }
 @Injectable({
   providedIn: 'root',
 })
 export class CommentsService {
- // private blogSet: Array<Blog> = [];
+  private commentSet: Array<Comment> = [];
   constructor(private commentsStore: CommentsStore) {}
   // $ = stream
-  //private blogSubject = new BehaviorSubject<Blog[]>(this.blogSet);
+  private commentSubject = new BehaviorSubject<Comment[]>(this.commentSet);
 
-  //get blogs$() {
+  get comments$() {
     // console.log(uuid());
 
-    //return this.blogSubject as Observable<Blog[]>;
+    return this.commentSubject as Observable<Comment[]>;
   }
 
   addComment(comment: AddComment) {
-    //this.blogSet.push(blog);
-    // const myBlog: Blog = {
-    //   id: uuid(),
-    //   title: blog.title,
-    //   content: blog.content,
-    // };
-    // console.log(blog.title);
+    const myComment: Comment = {
+      id: uuid(),
+      name: comment.name,
+      message: comment.message,
+    };
+    //console.log(blog.title);
     // console.log(myBlog.title);
-    // this.blogsStore.add(myBlog);
-    // this.blogSubject.next(this.blogSet);
+    this.commentsStore.add(myComment);
   }
 }
