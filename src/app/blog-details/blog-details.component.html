@@ -1,5 +1,5 @@
 <!-- <div *ngIf="blog$| async as blog " *ngFor="let blog of blogs | async"> -->
-<div style="padding: 20px 0px;" *ngIf="blog$ | async as blog">
+<div style="padding: 20px 0px" *ngIf="blog$ | async as blog">
   <div class="card">
     <div class="card-header">
       <h3>{{ blog.title | uppercase }} Details</h3>
@@ -15,9 +15,8 @@
         <input [(ngModel)]="blog.content" placeholder="content" />
       </p>
       <!-- </label> -->
-
-      <br />
-      <a href="#" routerLink="/comment" class="btn btn-primary">Add Comment</a>
+      <!-- <a href="#" routerLink="/comment" class="btn btn-primary">Add Comment</a> -->
     </div>
   </div>
+  <app-comment [blogId]="blog.id"></app-comment>
 </div>
