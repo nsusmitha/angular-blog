@@ -14,6 +14,7 @@ import { CommentComponent } from './comment/comment.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import { CommentDetailsComponent } from './comment-details/comment-details.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BlogDetailsComponent } from './blog-details/blog-details.component';
     HeaderComponent,
     FooterComponent,
     BlogDetailsComponent,
+    CommentDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   bootstrap: [AppComponent],
