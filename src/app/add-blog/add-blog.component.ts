@@ -1,3 +1,4 @@
+import { Comment } from './../commentstate/comment.model';
 import { BlogsQuery } from '../blogstate/blog.query';
 import { Blog } from './../blogstate/blog.model';
 import { AddBlogService } from './../blogstate/blog.service';
@@ -15,6 +16,7 @@ export class AddBlogComponent implements OnInit {
     id: '',
     title: '',
     content: '',
+    comments: this.
   };
 
   blogs$: Observable<Blog[]>;

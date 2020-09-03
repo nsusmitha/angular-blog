@@ -15,6 +15,7 @@ import { tap } from 'rxjs/operators';
 export class CommentComponent implements OnInit {
   public comment: Comment = {
     id: '',
+    blogId: '',
     name: '',
     message: '',
   };
@@ -36,7 +37,7 @@ export class CommentComponent implements OnInit {
       .pipe(tap((value) => console.log('retrieved comment: ', value)));
   }
 
-  addComment() {
-    this.commentsService.addComment(this.comment);
+  addComment(blogId) {
+    this.commentsService.addComment(this.comment, blogId);
   }
 }

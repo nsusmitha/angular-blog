@@ -1,3 +1,4 @@
+import { CommentDetailsComponent } from './comment-details/comment-details.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'add-blog', component: AddBlogComponent },
   { path: 'blog-details/:id', component: BlogDetailsComponent },
   { path: 'comment', component: CommentComponent },
+  { path: 'comment-details/:id', component: CommentDetailsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   //   { path: '**', component: PagenotfoundComponent },
 ];

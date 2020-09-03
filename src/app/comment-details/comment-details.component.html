@@ -1,0 +1,18 @@
+<p>comment-details works!</p>
+<div style="padding: 20px 0px" *ngIf="comment$ | async as comment">
+  <div class="card">
+    <div class="card-header">
+      <h3>{{ comment.blogId }} Comments</h3>
+      <div class="card-body">
+        <!-- <label
+      >content: -->
+        <br />
+        <p class="card-text">
+          <input [(ngModel)]="comment.message" placeholder="message" />
+        </p>
+        <!-- </label>  -->
+        <!-- <a href="#" routerLink="/comment" class="btn btn-primary">Add Comment</a> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,13 +10,32 @@
     <div class="card-body">
       <!-- <label
       >content: -->
-      <br />
+
       <p class="card-text">
         <input [(ngModel)]="blog.content" placeholder="content" />
       </p>
-      <!-- </label> -->
+      <!-- </label>  -->
       <!-- <a href="#" routerLink="/comment" class="btn btn-primary">Add Comment</a> -->
     </div>
   </div>
+  <!-- <div style="padding: 20px 0px" *ngIf="comment$ | async as comment">
+    <div class="card">
+      <div class="card-header">
+        <h3>{{ comment[0].blogId }} Comments</h3>
+        <div class="card-body">
+          <!-- <label
+        >content: -->
+  <!-- <br />
+          <p class="card-text">
+            <input [(ngModel)]="comment[0].message" placeholder="message" />
+          </p>
+          <!-- </label>  -->
+  <!-- <a href="#" routerLink="/comment" class="btn btn-primary">Add Comment</a> -->
+  <!-- </div>
+      </div> -->
+  <!-- </div> 
+  </div> -->
+
   <app-comment [blogId]="blog.id"></app-comment>
+  <app-comment-details [commentId]="comment.id"></app-comment-details>
 </div>
