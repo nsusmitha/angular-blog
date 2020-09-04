@@ -16,7 +16,7 @@ export class AddBlogComponent implements OnInit {
     id: '',
     title: '',
     content: '',
-    comments: this.
+    //comments: this.
   };
 
   blogs$: Observable<Blog[]>;

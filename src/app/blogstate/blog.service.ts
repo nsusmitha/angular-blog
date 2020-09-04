@@ -28,7 +28,7 @@ export class AddBlogService {
       id: uuid(),
       title: blog.title,
       content: blog.content,
-      comments: this.commentId,
+      //comments: this.commentId,
     };
     console.log(blog.title);
     console.log(myBlog.title);
