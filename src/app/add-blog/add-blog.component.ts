@@ -32,4 +32,5 @@ export class AddBlogComponent implements OnInit {
   addblog() {
     this.blogService.addBlog(this.blog);
   }
+  //testing git
 }
