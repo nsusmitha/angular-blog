@@ -22,7 +22,7 @@ export class CommentComponent implements OnInit {
   @Input() blogId: string;
   id: string = '';
   comments$: Observable<Comment>;
-  public globalCommentID: string;
+  //public globalCommentID: string;
   constructor(
     private route: ActivatedRoute,
     private commentsService: CommentsService,

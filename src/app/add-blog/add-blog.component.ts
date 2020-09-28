@@ -5,7 +5,6 @@ import { AddBlogService } from './../blogstate/blog.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
-
 @Component({
   selector: 'app-add-blog',
   templateUrl: './add-blog.component.html',

@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     // this.blogs$ = this.addBlogService.blogs$;
     console.log('This is here');
-    this.blogsQuery.selectAll().subscribe((blog) => console.log(blog));
+    //this.blogsQuery.selectAll().subscribe((blog) => console.log(blog));
     this.blogs$ = this.blogsQuery.selectAll();
   }
 
